@@ -79,7 +79,7 @@ var formData = [
 ];
 
 function createForm(array) {
-  var form = document.querySelector(".formContainer");
+  var form = document.querySelector(".container");
 
   for (i = 0; i < array.length; i++) {
     if (
@@ -92,7 +92,6 @@ function createForm(array) {
       newInput.id = formData[i].id;
       newInput.placeholder = formData[i].label;
       form.appendChild(newInput);
-      // console.log(newInput);
     } else if (array[i].type === "select") {
       var newSelect = document.createElement("select");
       var defaultSelected = document.createElement("option");
